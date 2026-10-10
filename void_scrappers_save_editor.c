@@ -3,7 +3,7 @@
  * Savegame editor for Void Scrappers
  * By J. Stuart McMurray
  * Created 20250427
- * Last Modified 20250428
+ * Last Modified 20261010
  */
 
 #include <sys/mman.h>
@@ -22,10 +22,6 @@
 /* IFSET evaluates to x if we're setting memory in the savefile, y otherwise. */
 #define IFSET(x, y) (willset ? (x) : (y))
 int willset;
-
-/* Our own constants. */
-#define TRUE    "true"
-#define FALSE   "false"
 
 void
 usage(void)
