@@ -65,7 +65,7 @@ void
 parse_table(const char *buf, size_t len, size_t *start, uint32_t size, int nt)
 {
         char      key_type, value_type;
-        char     *key;
+        char     *key, *svalue;
         double    d;
         int       j;
         size_t    vstart;
@@ -104,6 +104,11 @@ parse_table(const char *buf, size_t len, size_t *start, uint32_t size, int nt)
                         case LUA_TNUMBER:
                                 d = pop_number(buf, len, start, &vstart);
                                 printf("\t0x%04zx=%f\n", vstart, d);
+                                break;
+                        case LUA_TSTRING:
+                                svalue = pop_string(buf, len, start);
+                                printf("\t0x%04zx(s)=%s\n", vstart, svalue);
+                                free(svalue); svalue = NULL;
                                 break;
                         case LUA_TTABLE:
                                 POP(buf, len, *start, uint32_t, count);
