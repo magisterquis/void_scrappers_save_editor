@@ -3,7 +3,7 @@
  * Modify a value in the savefile
  * By J. Stuart McMurray
  * Created 20250428
- * Last Modified 20250428
+ * Last Modified 20261010
  */
 
 #include <err.h>
@@ -22,7 +22,7 @@ modify_bool(char *buf, size_t len, size_t where, char val)
         buf[where] = val;
 }
 
-/* modify modifie buf according to mod, which should be of the form 0xoff=val,
+/* modify modifies buf according to mod, which should be of the form 0xoff=val,
  * where val is either true, false, or a float. */
 void
 modify(char *buf, size_t len, const char *mod)

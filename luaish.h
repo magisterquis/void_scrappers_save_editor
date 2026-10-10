@@ -3,16 +3,16 @@
  * Things mooched from lua.h
  * By J. Stuart McMurray
  * Created 20250427
- * Last Modified 20250427
+ * Last Modified 20261010
  */
 
 #ifndef HAVE_LUAISH_H
 #define HAVE_LUAISH_H 1
 
-#define LUA_TBOOLEAN            1
-#define LUA_TNUMBER             3
-#define LUA_TSTRING		4
-#define LUA_TTABLE              5
+#define LUA_TBOOLEAN 1
+#define LUA_TNUMBER  3
+#define LUA_TSTRING  4
+#define LUA_TTABLE   5
 
 #endif /* #define HAVE_LUAISH_H */
 
